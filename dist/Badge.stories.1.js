@@ -1,0 +1,64 @@
+import React from 'react';
+import { Badge } from './Badge';
+import { Icon } from './Icon';
+import { Button } from 'antd';
+export default {
+  title: 'Design System/Badge',
+  component: Button
+};
+export var AllBadges = function AllBadges(args) {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Badge, {
+    status: "positive"
+  }, "Positive"), /*#__PURE__*/React.createElement(Badge, {
+    status: "negative"
+  }, "Negative"), /*#__PURE__*/React.createElement(Badge, {
+    status: "neutral"
+  }, "Neutral"), /*#__PURE__*/React.createElement(Badge, {
+    status: "error"
+  }, "Error"), /*#__PURE__*/React.createElement(Badge, {
+    status: "warning"
+  }, "Warning"), /*#__PURE__*/React.createElement(Badge, {
+    status: "positive"
+  }, /*#__PURE__*/React.createElement(Icon, args), "with icon"));
+};
+AllBadges.args = {
+  icon: 'facehappy',
+  inline: true
+};
+AllBadges.storyName = 'all badges';
+export var Positive = function Positive(args) {
+  return /*#__PURE__*/React.createElement(Badge, {
+    status: "positive"
+  }, "Positive");
+};
+export var Negative = function Negative(args) {
+  return /*#__PURE__*/React.createElement(Badge, {
+    status: "negative"
+  }, "Negative");
+};
+export var Warning = function Warning(args) {
+  return /*#__PURE__*/React.createElement(Badge, {
+    status: "warning"
+  }, "Warning");
+};
+export var Neutral = function Neutral(args) {
+  return /*#__PURE__*/React.createElement(Badge, {
+    status: "neutral"
+  }, "Neutral");
+};
+export var Error = function Error(args) {
+  return /*#__PURE__*/React.createElement(Badge, {
+    status: "error"
+  }, "Error");
+};
+export var WithIcon = function WithIcon(args) {
+  return /*#__PURE__*/React.createElement(Button, {
+    type: "primary"
+  }, "Primary Button");
+};
+WithIcon.args = {
+  status: 'warning',
+  icon: 'check',
+  inline: true
+};
+WithIcon.storyName = 'with icon';
